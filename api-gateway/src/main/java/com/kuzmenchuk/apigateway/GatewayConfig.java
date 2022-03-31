@@ -16,6 +16,8 @@ public class GatewayConfig {
                         .uri("http://localhost:8081"))
                 .route("oauth-service", r -> r.path("/oauth/**")
                         .uri("http://localhost:8081"))
+                .route("user-personal-info-service", r -> r.path("/api/user-info/**")
+                        .uri("http://localhost:8082"))
                 .build();
     }
 
